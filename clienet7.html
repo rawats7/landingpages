@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Landing Page</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0e0f12;
+    color: #fff;
+  }
+
+  /* ───── HEADER / MARQUEE ───── */
+  header {
+    padding: 0;
+    margin: 0;
+  }
+  .marq-box {
+    background: rgba(0,255,200,0.05);
+    padding: 18px;
+    border-radius: 15px;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 0 18px #2affd3;
+    backdrop-filter: blur(4px);
+  }
+  marquee {
+    color: #00ffe0;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  /* ───── MAIN BOX ───── */
+  .container {
+    background: rgba(255,255,255,0.03);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 0 22px #2affd3;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    gap: 20px;
+  }
+
+  .left {
+    max-width: 45%;
+  }
+
+  .left h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+
+  .left p {
+    font-size: 18px;
+    color: #bfffe9;
+    line-height: 1.7;
+  }
+
+  /* ───── JOIN BUTTON (PROFESSIONAL — LESS GLOW) ───── */
+  .btn {
+    background: #1fe6b2;
+    color: #000;
+    padding: 16px 28px;
+    border-radius: 10px;
+    font-size: 22px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content:center;
+    width:100%;
+    gap: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 0 8px rgba(31,230,178,0.6);
+  }
+  .btn:hover {
+    box-shadow: 0 0 14px rgba(31,230,178,1);
+    transform: translateY(-3px);
+  }
+
+  /* ───── PROFILE BOX ───── */
+  .profile-box {
+    width: 430px;
+    height: 430px;
+    background: #1b1c22;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+  }
+
+  /* animation on image */
+  .profile-box img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+
+  @keyframes floatGlow {
+    0% { transform: translateY(0); filter: drop-shadow(0 0 4px #2affd3); }
+    50% { transform: translateY(-6px); filter: drop-shadow(0 0 10px #2affd3); }
+    100% { transform: translateY(0); filter: drop-shadow(0 0 4px #2affd3); }
+  }
+
+  @keyframes slowZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+  }
+
+  .profile-zoom { animation: slowZoom 10s ease-in-out infinite alternate; }
+
+  /* ───── PARTICLES ───── */
+  .neon-particle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #2affd3;
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 6px #2affd3);
+    animation: floatUp linear infinite;
+    pointer-events:none;
+  }
+
+  @keyframes floatUp {
+    from { transform: translateY(0); opacity:0.7; }
+    to { transform: translateY(-120vh); opacity:0; }
+  }
+
+  /* ───── RESPONSIVE ───── */
+  @media(max-width:900px){
+    .container{flex-direction:column; text-align:center; padding:30px !important;}
+    .left{max-width:100%;}
+    .profile-box{width:300px; height:300px; margin-top:25px;}
+    .left h1{font-size:40px;}
+    .btn{width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<!-- MARQUEE -->
+<header>
+  <div class="marq-box">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      🔥 Premium Color Trading Signals • 🎯 Ultra Fast Alerts • 💹 90%+ Accuracy • 🚀 Join the Winning Traders Army
+    </marquee>
+  </div>
+</header>
+
+<!-- MAIN BOX -->
+<div class="container">
+  <div class="left">
+    <h1>RAHUL SURESHOT</h1>
+
+    <p>
+      🚀 Accurate color trading predictions daily.<br>
+      🎯 Instant ultra-fast alerts.<br>
+      💹 Safe entry strategies for maximum profits.<br>
+      ⚡ Trusted growing community on Telegram.
+    </p>
+
+    <!-- UPDATED PROFESSIONAL BUTTON -->
+    <a href="https://t.me/yourtelegramusername" target="_blank" class="btn">🚀 Join Telegram Now</a>
+  </div>
+
+  <!-- PROFILE PHOTO AREA WITH STAR → PHOTO EFFECT -->
+  <div class="profile-box profile-zoom">
+    
+    <!-- Real profile photo -->
+    <img id="pfp" src="profilephoto.png"
+         style="opacity:0; transition:1.7s ease-in-out;" />
+
+    <!-- Stars effect -->
+    <img id="stars" src="https://i.imgur.com/1ZQZ1ZP.jpeg"
+         style="opacity:1; transition:1.7s ease-in-out; animation:floatGlow 3s infinite ease-in-out;" />
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:30px; margin-top:40px; color:#bbb; font-size:14px;">
+  <div><strong>Mannat Ads Service</strong></div>
+  <div><a href="https://t.me/Wishmaster070" style="color:#8dcdff;">Click here for Telegram & Meta Ads</a></div>
+  <div style="margin-top:8px;">Made by Rajendra Singh — All rights reserved</div>
+</footer>
+
+<script>
+  /* STAR → PHOTO FADE ANIMATION */
+  setTimeout(()=>{
+    document.getElementById('stars').style.opacity = '0';
+    document.getElementById('pfp').style.opacity = '1';
+  }, 1500);
+
+  /* PARTICLES */
+  function createParticle(){
+    const p = document.createElement('div');
+    p.classList.add('neon-particle');
+    p.style.left = Math.random()*100 + 'vw';
+    p.style.top = '100vh';
+    p.style.animationDuration = (4 + Math.random()*6) + 's';
+    document.body.appendChild(p);
+    setTimeout(()=>p.remove(), 9000);
+  }
+  setInterval(createParticle, 400);
+</script>
+
+</body>
+</html>
