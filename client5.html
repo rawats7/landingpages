@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big & Small Number Predictions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      background:#111;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:20px;
+      font-family:'Roboto', sans-serif;
+    }
+    .main-card {
+      background: rgba(30,30,30,0.95);
+      border-radius:25px;
+      padding:40px 30px;
+      max-width:600px;
+      width:100%;
+      box-shadow:0 0 50px rgba(255,165,0,0.3);
+      text-align:center;
+    }
+    .marquee {
+      background:#222;
+      color:#ffa500;
+      padding:10px 0;
+      font-weight:600;
+      font-size:1.2rem;
+      border-radius:10px;
+      margin-bottom:25px;
+      overflow:hidden;
+    }
+    .marquee span {
+      display:inline-block;
+      white-space:nowrap;
+      animation: marquee 15s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .profile-img {width:120px;height:120px;border-radius:20px;margin:0 auto 10px;object-fit:cover;border:3px solid #ffa500;}
+    .username {color:#ccc;font-size:0.95rem;margin-bottom:20px;}
+    h1 {font-family:'Playfair Display', serif;font-size:2rem;color:#ff7e00;margin-bottom:15px;}
+    .subheading {background:#000;color:#ff3b3b;font-weight:700;padding:8px 12px;margin:20px 0 15px;font-size:1rem;border-radius:8px;display:inline-block;letter-spacing:1px;}
+    .btn {display:flex;align-items:center;justify-content:center;gap:10px;background:#0088cc;color:#fff;padding:15px 0;border-radius:50px;font-weight:600;text-decoration:none;transition:0.3s;box-shadow:0 0 15px rgba(0,136,204,0.5);font-size:1.1rem;width:100%;margin-bottom:25px;}
+    .btn:hover {transform:scale(1.03);box-shadow:0 0 25px rgba(0,136,204,0.8);}
+    .btn svg {width:20px;height:20px;}
+    .extra-info {font-size:0.9rem;color:#aaa;margin-bottom:30px;}
+    .details {text-align:center;margin:20px 0;color:#ddd;font-size:0.95rem;list-style:none;line-height:1.6;}
+    .details li {margin-bottom:10px;}
+    .predictions-title {font-size:1.5rem;color:#ffa500;margin-bottom:20px;display:flex;justify-content:center;align-items:center;gap:10px;}
+    .color-grid {display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-bottom:25px;}
+    .color-box {
+      border-radius:15px;width:100px;height:100px;display:flex;justify-content:center;align-items:center;
+      font-weight:700;font-size:1.5rem;color:#fff;box-shadow:0 0 15px rgba(255,165,0,0.4);
+      transition:transform 0.3s,box-shadow 0.3s;
+    }
+    .color-box:hover {transform:translateY(-8px) scale(1.05);}
+    .big { background:#e67e22; box-shadow:0 0 20px #e67e22; }  /* Orange for Big */
+    .small { background:#27ae60; box-shadow:0 0 20px #27ae60; } /* Green for Small */
+    .draw { background:#2980b9; box-shadow:0 0 20px #2980b9; }  /* Blue for Draw */
+    .footer {font-size:0.8rem;color:#888;margin-top:20px;}
+    .footer a {color:#ffa500;text-decoration:none;}
+    @media (max-width:500px){
+      .marquee{font-size:1rem;}
+      h1{font-size:1.5rem;}
+      .color-box{width:80px;height:80px;font-size:1.2rem;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-card">
+  <!-- Marquee -->
+  <div class="marquee"><span>🔥 DAILY BIG & SMALL NUMBER PREDICTIONS – JOIN TELEGRAM NOW! 🔥</span></div>
+
+  <!-- Profile -->
+  <img src="https://via.placeholder.com/120x120.png?text=Profile" alt="Profile Photo" class="profile-img">
+  <div class="username">@YourTelegramUsername</div>
+
+  <h1>NUMBER PREDICTIONS – BIG & SMALL</h1>
+
+  <div class="subheading">🎯 WHY YOU SHOULD CHOOSE US</div>
+  <ul class="details">
+    <li>✅ Daily verified number predictions for Big, Small & Draw</li>
+    <li>📊 Easy-to-follow guidance for Raja games</li>
+    <li>💬 Live updates on Telegram</li>
+    <li>💰 Improve your winning potential</li>
+    <li>🛡️ Trusted & safe community</li>
+  </ul>
+
+  <!-- Telegram Button -->
+  <a href="https://t.me/yourchannelusername" target="_blank" class="btn">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M9.999 12l9-5.25-2.121 12.27L12 13.999 9.999 12z"/></svg>
+    JOIN TELEGRAM
+  </a>
+
+  <div class="extra-info">💡 Trusted, Accurate & Daily Number Predictions</div>
+
+  <!-- Predictions Section -->
+  <div class="subheading">📅 TODAY'S NUMBER PREDICTIONS</div>
+  <div class="color-grid">
+    <div class="color-box big">8</div>
+    <div class="color-box small">5</div>
+  </div>
+<!-- Footer CTA Section -->
+<div style="margin-top:40px; text-align:center; font-family:'Playfair Display', serif;">
+  <div style="font-size:1.4rem; font-weight:700; color:#ff7e00; margin-bottom:6px;">
+    MANNAT ADS SERVICE
+  </div>
+  <div style="font-size:0.9rem; color:#3498db;">
+    <a href="https://t.me/Wishmaster070" style="color:#3498db; text-decoration:underline; text-shadow:none; box-shadow:none;">
+      Click here to run ads in low CPC or build your website and landing pages at affordable price
+    </a>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <div class="footer">Made by Rajendra Singh | <a href="https://rajendra9315.github.io/deepwebstudio/privacypolicy.html">Privacy Policy</a></div>
+
+</div>
+
+</body>
+</html>
