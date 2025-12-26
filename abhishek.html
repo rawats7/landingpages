@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hacker Reveal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:#00ff99;
+    font-family: "Courier New", monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:100%;
+    max-width:420px;
+    background:#050505;
+    border:1px solid #00ff99;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 40px rgba(0,255,153,0.3);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:15px;
+    animation:flicker 1.5s infinite;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    background:#000;
+    border:1px solid #00ff99;
+    color:#00ff99;
+    font-size:16px;
+    border-radius:6px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#00ff99;
+    color:#000;
+    border:none;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#00cc77;
+}
+
+/* RESULT */
+.result{
+    display:none;
+    text-align:center;
+}
+
+.photo-box{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    margin:15px auto;
+    overflow:hidden;
+    border:2px solid #00ff99;
+    box-shadow:0 0 25px rgba(0,255,153,0.5);
+}
+
+.photo-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.text{
+    margin-top:10px;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* Animations */
+@keyframes flicker{
+    0%,19%,21%,23%,25%,54%,56%,100%{opacity:1;}
+    20%,24%,55%{opacity:0.3;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- FORM -->
+<div id="formScreen">
+    <h2>ACCESS GRANTED</h2>
+    <input id="nameInput" placeholder="Enter victim name 😈">
+    <input id="behaviorInput" placeholder="Describe behavior">
+    <button onclick="reveal()">NEXT</button>
+</div>
+
+<!-- RESULT -->
+<div id="resultScreen" class="result">
+    <h2 id="finalName"></h2>
+
+    <div class="photo-box">
+        <img src="https://raw.githubusercontent.com/rawats7/landingpages/main/6231199490492795872.jpg">
+    </div>
+
+    <div class="text" id="typingText"></div>
+</div>
+
+</div>
+
+<script>
+const personalities = [
+    "acts smart but Google is his guru",
+    "thinks he is dangerous but WiFi scares him",
+    "born legend in his own mind",
+    "confidence level 100, skills loading…",
+    "future billionaire according to himself",
+    "thinks girls fall for attitude, not actions",
+    "sigma mindset with beta execution"
+];
+
+const roastLines = [
+    "System analysis complete...",
+    "Ego detected: HIGH",
+    "Talent detected: BUFFERING...",
+    "Reality check failed successfully",
+    "Personality cracked 😈"
+];
+
+function reveal(){
+    const name = nameInput.value;
+    const behavior = behaviorInput.value;
+
+    if(!name || !behavior){
+        alert("Fill all fields hacker 😎");
+        return;
+    }
+
+    formScreen.style.display = "none";
+    resultScreen.style.display = "block";
+    finalName.innerText = name;
+
+    const randomPersonality = personalities[Math.floor(Math.random()*personalities.length)];
+
+    const fullText =
+        roastLines.join("<br>") + "<br><br>" +
+        "This guy is the husband of <b>Khusnuma</b>.<br><br>" +
+        "Known as a <b>big personality</b> in his own universe.<br><br>" +
+        "Behavior Input: <b>" + behavior + "</b><br><br>" +
+        "Auto Personality: <b>" + randomPersonality + "</b><br><br>" +
+        "Status: <b>Certified Legend (Self-Proclaimed)</b>";
+
+    typeEffect("typingText", fullText, 30);
+}
+
+function typeEffect(id, text, speed){
+    let i = 0;
+    document.getElementById(id).innerHTML = "";
+    function typing(){
+        if(i < text.length){
+            document.getElementById(id).innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+        }
+    }
+    typing();
+}
+</script>
+
+</body>
+</html>
