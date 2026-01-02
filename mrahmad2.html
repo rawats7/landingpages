@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>mr ahmad 2</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>rolex bhai </title>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -21,207 +21,229 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=2195709610958973&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+:root{
+  --panel:#071e1d;
+  --teal1:#0ef2d5;
+  --teal2:#13f2ff;
+  --btn-text:#001818;
+  --muted:rgba(255,255,255,0.75);
+  --label-red:#ff2f5a;
 }
 
 body{
-  background: radial-gradient(circle at top, #1a0f08, #0b0705);
-  min-height:100vh;
+  margin:0;
+  padding:40px 0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#061214,#081617,#071013);
+  color:#fff;
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:20px;
-  color:#fff;
+  min-height:100vh;
+  overflow-x:hidden;
 }
 
-/* 🌟 Marquee Header */
-.marquee {
-  width:100%;
+/* ✅ CARD WITH 4-SIDE EDGE GLOW */
+.wrap{
+  max-width:400px;
+  width:80%;
+  background:var(--panel);
+  border-radius:20px;
+  padding:22px 20px 30px;
+  text-align:center;
+  position:relative;
+
+  /* 🔥 EDGE GLOW (NOT MID-PAGE) */
+  box-shadow:
+    0 0 0 1px rgba(14,242,213,0.35),     /* thin neon edge */
+    0 0 20px rgba(14,242,213,0.25),      /* soft glow */
+    0 0 40px rgba(19,242,255,0.15),      /* outer glow */
+    0 25px 45px rgba(0,0,0,0.7);         /* depth */
+
+  animation: edgeGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes edgeGlow{
+  from{
+    box-shadow:
+      0 0 0 1px rgba(14,242,213,0.25),
+      0 0 16px rgba(14,242,213,0.18),
+      0 0 32px rgba(19,242,255,0.1),
+      0 25px 45px rgba(0,0,0,0.7);
+  }
+  to{
+    box-shadow:
+      0 0 0 1px rgba(14,242,213,0.45),
+      0 0 28px rgba(14,242,213,0.35),
+      0 0 55px rgba(19,242,255,0.22),
+      0 25px 45px rgba(0,0,0,0.7);
+  }
+}
+
+/* MARQUEE */
+.marquee{
+  background:linear-gradient(90deg,var(--teal1),var(--teal2));
+  color:var(--btn-text);
+  font-weight:900;
+  padding:10px 0;
+  border-radius:12px;
+  margin-bottom:12px;
+  font-size:15px;
+  letter-spacing:1px;
+}
+
+/* PROFILE */
+.profile-box{
+  width:180px;
+  height:180px;
+  margin:12px auto 18px;
+  border-radius:18px;
   overflow:hidden;
-  white-space:nowrap;
+  border:4px solid rgba(14,242,213,0.25);
+}
+.profile-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* TEXT */
+h1{
+  font-size:28px;
+  margin:6px 0;
+  font-weight:800;
+}
+.subtitle{
+  font-size:14px;
+  color:var(--muted);
   margin-bottom:18px;
 }
 
-.marquee span{
-  display:inline-block;
-  padding-left:100%;
-  animation: marquee 12s linear infinite;
-  font-size:14px;
-  font-weight:600;
-  background: linear-gradient(90deg,#ffb347,#ff6a00,#ffd194);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-/* 🧱 Main Card */
-.card{
-  max-width:420px;
+/* CTA */
+.pill{
+  display:block;
   width:100%;
-  background: linear-gradient(180deg,#1b120c,#120a06);
-  border-radius:24px;
-  padding:30px 25px;
-  text-align:center;
-  position:relative;
-  box-shadow:
-    0 0 25px rgba(255,106,0,0.25),
-    0 0 60px rgba(255,140,0,0.15);
+  padding:18px 0;
+  margin:14px 0;
+  border-radius:50px;
+  background:linear-gradient(90deg,var(--teal1),var(--teal2));
+  color:var(--btn-text);
+  font-weight:900;
+  font-size:18px;
+  text-decoration:none;
+  letter-spacing:1px;
+}
+.pill-sub{
+  font-size:12px;
+  color:var(--muted);
 }
 
-/* ✨ Glow Border */
-.card::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  border-radius:26px;
-  background: linear-gradient(120deg,#ff6a00,#ffb347,#ff6a00);
-  z-index:-1;
-  filter: blur(10px);
-}
-
-/* 👤 Profile */
-.profile{
-  display:flex;
-  justify-content:center;
-  margin:14px 0 14px;
-}
-
-.profile img{
-  width:120px;
-  height:120px;
-  object-fit:cover;
-  border-radius:16px;
-  border:2px solid #ff8c00;
-}
-
-/* 👤 Name */
-.name{
-  font-size:20px;
-  font-weight:600;
+.hurry{
+  color:var(--teal1);
+  font-weight:800;
   margin-top:6px;
 }
 
-.role{
-  font-size:14px;
-  color:#ffb347;
-  margin-bottom:16px;
-}
-
-/* 📄 Description */
-.desc{
-  font-size:15px;
-  color:#ddd;
-  line-height:1.5;
-  margin-bottom:22px;
-}
-
-/* 📊 Stats */
-.stats{
+/* TIMER */
+.timer{
   display:flex;
-  justify-content:space-around;
-  margin-bottom:24px;
+  justify-content:center;
+  gap:15px;
+  margin:16px 0 20px;
 }
-
-.stat{
-  font-size:13px;
-  color:#ccc;
+.cell{
+  background:rgba(1,40,38,0.6);
+  padding:12px 16px;
+  border-radius:10px;
+  width:70px;
 }
-
-.stat strong{
-  display:block;
-  font-size:18px;
-  color:#ffb347;
+.num{
+  font-size:28px;
+  font-weight:800;
 }
-
-/* 🚀 CTA Button */
-.join-btn{
-  display:block;
-  width:100%;
-  padding:15px;
-  border-radius:14px;
-  background: linear-gradient(90deg,#ff6a00,#ffb347);
-  color:#1a0f08;
-  text-decoration:none;
-  font-size:17px;
-  font-weight:700;
-  transition:0.25s ease;
-}
-
-.join-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 30px rgba(255,140,0,0.4);
-}
-
-.note{
-  margin-top:12px;
+.lab{
   font-size:12px;
-  color:#aaa;
+  color:var(--label-red);
+  margin-top:4px;
+  font-weight:700;
+}
+
+/* FEATURES */
+.features{margin-bottom:18px;}
+.feature-item{
+  margin:6px 0;
+  font-weight:700;
+  color:var(--muted);
+}
+.star{color:#ffd24d;}
+
+/* EXPERIENCE */
+.divider{
+  height:1px;
+  background:rgba(255,255,255,0.05);
+  margin:20px auto;
+}
+.exp h2{font-size:20px;}
+.big{
+  color:var(--teal1);
+  font-weight:800;
+}
+.mini{
+  font-size:12px;
+  opacity:0.6;
+  letter-spacing:2px;
 }
 </style>
+
+<script>
+let m=30,s=0;
+setInterval(()=>{
+  document.getElementById("min").innerText=String(m).padStart(2,'0');
+  document.getElementById("sec").innerText=String(s).padStart(2,'0');
+  if(s===0){ if(m===0)return; m--; s=59; } else s--;
+},1000);
+</script>
 </head>
 
 <body>
+<div class="wrap">
 
-<div class="card">
-
-  <!-- 🌈 Marquee -->
   <div class="marquee">
-    <span>🔥 Exclusive Telegram Community • Free Updates • Real Value • Join Now 🚀</span>
+    <marquee scrollamount="4">🔥 FREE VIP SURESHOT • LIMITED TIME • JOIN FAST 🔥</marquee>
   </div>
 
-  <!-- Profile -->
-  <div class="profile">
-    <img src="https://raw.githubusercontent.com/rajendra9315/deepwebstudio/main/mrahmad2.jpg" alt="Profile">
+  <div class="profile-box">
+    <img src="https://raw.githubusercontent.com/rajendra9315/deepwebstudio/main/mrahmad2.jpg">
   </div>
 
-  <div class="name">TASHAN PREDICTION</div>
-  <div class="role">• Pattern Reader • Insight Provider • Guide</div>
+  <h1>Vip All wallet sure shot ❤️</h1>
+  <div class="subtitle">JOIN FAST FOR FREE SURESHOT VIP HACKS</div>
 
-  <div class="desc">
-    
-  • Daily high-value updates<br>
-  • Exclusive content only on Telegram<br>
-  • Real insights, no fake promises<br>
-  • Free access to a growing community
- </div>
+  <a class="pill" href="https://t.me/+8p1MK2idoB82Yzc1">JOIN TELEGRAM NOW</a>
+  <div class="pill-sub">FREE VIP HACKS</div>
 
+  <div class="hurry">HURRY UP! JOIN NOW</div>
 
-  <!-- Stats -->
-  <div class="stats">
-    <div class="stat">
-      <strong>6K+</strong>
-      Members
-    </div>
-    <div class="stat">
-      <strong>Daily</strong>
-      Updates
-    </div>
-    <div class="stat">
-      <strong>100%</strong>
-      Free
-    </div>
+  <div class="timer">
+    <div class="cell"><div class="num" id="min">30</div><div class="lab">MIN</div></div>
+    <div class="cell"><div class="num" id="sec">00</div><div class="lab">SEC</div></div>
   </div>
 
-  <!-- CTA -->
-  <a href="https://t.me/+8p1MK2idoB82Yzc1" class="join-btn">
-    🔥 Join Telegram Channel
-  </a>
+  <div class="features">
+    <div class="feature-item">⭐ 100% WINNING SURESHOT</div>
+    <div class="feature-item">⭐ 100% LOSS RECOVERY</div>
+    <div class="feature-item">⭐ MONTHLY INCOME 30K–50K</div>
+  </div>
 
-  <div class="note">
-    No spam • Leave anytime
+  <div class="divider"></div>
+
+  <div class="exp">
+    <h2>5+ YEARS EXPERIENCE</h2>
+    <div class="big">10 LAKH+ WINNING</div>
+    <div class="mini">NUMBER KING</div>
   </div>
 
 </div>
-
 </body>
 </html>
