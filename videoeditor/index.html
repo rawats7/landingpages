@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Video Editor</title>
+<style>
+  body { font-family: Arial; text-align: center; padding: 20px; background: #f0f0f0; }
+  video, canvas { border: 1px solid #333; margin: 10px 0; max-width: 90%; }
+  input, button { margin: 5px; padding: 10px; }
+</style>
+</head>
+<body>
+
+<h1>Mini Video Editor</h1>
+
+<!-- Upload multiple clips -->
+<input type="file" id="videoUpload" accept="video/*" multiple><br>
+
+<!-- Video preview -->
+<video id="videoPreview" controls></video><br>
+
+<!-- Canvas for editing -->
+<canvas id="videoCanvas"></canvas><br>
+
+<!-- Text overlay input -->
+<input type="text" id="overlayText" placeholder="Enter text overlay"><br>
+
+<!-- Effects dropdown -->
+<select id="effectSelect">
+  <option value="none">No Effect</option>
+  <option value="grayscale">Grayscale</option>
+  <option value="invert">Invert Colors</option>
+  <option value="brightness">Brighten</option>
+</select><br>
+
+<!-- Buttons -->
+<button id="previewBtn">Preview on Canvas</button>
+<button id="exportBtn">Export Video</button>
+
+<script src="script.js"></script>
+</body>
+</html>
