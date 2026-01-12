@@ -3,41 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pro Video Creator</title>
+<title>Ultimate Pro Video Editor</title>
 <style>
-  body { font-family: Arial; background: #111; color: #fff; text-align: center; padding: 20px;}
-  video, canvas { border:1px solid #333; margin:10px 0; max-width:90%; }
-  input, button, select { margin:5px; padding:10px; }
-  .controls { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; }
-  .presetBtn { padding:10px 20px; margin:5px; cursor:pointer; background:#222; color:#fff; border:none; }
+body { font-family: Arial; background:#111; color:#fff; text-align:center; padding:20px; }
+video, canvas { border:1px solid #333; margin:10px 0; max-width:90%; }
+input, button, select { margin:5px; padding:10px; }
+.controls { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; }
+.presetBtn { padding:10px 20px; margin:5px; cursor:pointer; background:#222; color:#fff; border:none; }
+.slider { width:150px; }
 </style>
 </head>
 <body>
 
-<h1>Pro Video Creator</h1>
+<h1>Ultimate Pro Video Editor</h1>
 
-<!-- Upload multiple clips -->
+<!-- Upload videos -->
 <input type="file" id="videoUpload" accept="video/*" multiple><br>
 
-<!-- Video preview -->
+<!-- Preview -->
 <video id="videoPreview" controls></video><br>
 <canvas id="videoCanvas"></canvas><br>
 
 <!-- Text overlay -->
-<input type="text" id="overlayText" placeholder="Enter title/subtitle"><br>
+<input type="text" id="overlayText" placeholder="Enter text overlay"><br>
 
-<!-- Preset buttons -->
+<!-- Presets -->
 <div class="controls">
   <button class="presetBtn" data-preset="cinematic">Cinematic</button>
   <button class="presetBtn" data-preset="bright">Bright & Fun</button>
   <button class="presetBtn" data-preset="dramatic">Dramatic</button>
   <button class="presetBtn" data-preset="classic">Classic</button>
+  <button class="presetBtn" data-preset="vintage">Vintage</button>
 </div>
 
 <!-- Background audio -->
-<input type="file" id="audioUpload" accept="audio/*"><br>
+<input type="file" id="audioUpload" accept="audio/*">
+<input type="range" id="audioVolume" min="0" max="1" step="0.01" value="0.5" class="slider"><br>
 
-<!-- Export button -->
+<!-- Export -->
 <button id="exportBtn">Export Video</button>
 
 <script src="script.js"></script>
