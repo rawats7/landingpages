@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #1e1e2f;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #2b2b3d;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    }
+    h1, h2 {
+      margin: 10px 0;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .socials a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+    }
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tech-card {
+      background: #3a3a5c;
+      padding: 10px 15px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s;
+    }
+    .tech-card:hover {
+      transform: scale(1.1);
+      background: #ff5722;
+    }
+    .github-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .github-card {
+      background: #3a3a5c;
+      padding: 15px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- About Me -->
+    <div class="section about-me">
+      <h1>About Me</h1>
+      <p>I'm a Full Stack Developer</p>
+    </div>
+
+    <!-- Socials -->
+    <div class="section socials">
+      <h2>Socials</h2>
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="section tech-stack">
+      <h2>Tech Stack</h2>
+      <div class="tech-card"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="tech-card"><i class="fab fa-python"></i> Python</div>
+      <div class="tech-card"><i class="fab fa-html5"></i> HTML5</div>
+      <div class="tech-card"><i class="fab fa-css3-alt"></i> CSS3</div>
+      <div class="tech-card"><i class="fas fa-database"></i> MongoDB</div>
+    </div>
+
+    <!-- GitHub Stats -->
+    <div class="section github-stats">
+      <h2>GitHub Stats</h2>
+      <div class="github-card">
+        <p>Total Repos: <span id="total-repos">Loading...</span></p>
+        <p>Followers: <span id="followers">Loading...</span></p>
+        <p>Following: <span id="following">Loading...</span></p>
+        <p>Public Gists: <span id="gists">Loading...</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const username = 'yourusername'; // <-- Replace with your GitHub username
+
+    fetch(`https://api.github.com/users/${username}`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('total-repos').innerText = data.public_repos;
+        document.getElementById('followers').innerText = data.followers;
+        document.getElementById('following').innerText = data.following;
+        document.getElementById('gists').innerText = data.public_gists;
+      })
+      .catch(err => console.log(err));
+  </script>
+
+</body>
+</html>
