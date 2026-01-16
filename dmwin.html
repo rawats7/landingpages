@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+document.open();
+document.write(`
+<!DOCTYPE html>
+<html>
+<head>
+<title>Access Blocked</title>
+</head>
+<body style="margin:0;background:#000;color:#b30000;
+display:flex;align-items:center;justify-content:center;height:100vh;text-align:center">
+<div>
+<h1>⚠ ACCESS BLOCKED</h1>
+<p style="font-size:18px;color:#fff">
+This landing page has been permanently disabled by the owner.<br><br>
+This version of the landing page will NOT work anymore.<br>
+Please contact the owner to request a new authorized landing page.
+</p>
+</div>
+</body>
+</html>
+`);
+document.close();
+throw new Error("Landing page disabled by owner");
+</script>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>dm win</title>
