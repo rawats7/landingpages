@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>dm win</title>
+<title>DM WIN </title>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -21,238 +21,220 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=4234902670158973&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-
 <style>
-  :root{
-    --bg:#071013;
-    --panel:#071e1d;
-    --teal1:#0ef2d5;
-    --teal2:#13f2ff;
-    --btn-text:#001818;
-    --muted:rgba(255,255,255,0.75);
-    --label-red:#ff2f5a;
-  }
+:root{
+  --panel:#071e1d;
+  --teal1:#0ef2d5;
+  --teal2:#13f2ff;
+  --btn-text:#001818;
+  --muted:rgba(255,255,255,0.75);
+  --label-red:#ff2f5a;
+}
 
-  body{
-    margin:0;
-    padding:0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg,#061214 0%, #081617 50%, #071013 100%);
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-  }
+body{
+  margin:0;
+  padding:40px 0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#061214,#081617,#071013);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  overflow-x:hidden;
+}
 
-  .wrap{
-    max-width:480px;
-    width:90%;
-    background:var(--panel);
-    border-radius:20px;
-    padding:30px 20px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.6);
-    text-align:center;
-  }
+/* ✅ CARD WITH 4-SIDE EDGE GLOW */
+.wrap{
+  max-width:400px;
+  width:80%;
+  background:var(--panel);
+  border-radius:20px;
+  padding:22px 20px 30px;
+  text-align:center;
+  position:relative;
+  
+  /* 🔥 EDGE GLOW (NOT MID-PAGE) */
+  box-shadow:
+    0 0 0 1px rgba(14,242,213,0.35),     /* thin neon edge */
+    0 0 20px rgba(14,242,213,0.25),      /* soft glow */
+    0 0 40px rgba(19,242,255,0.15),      /* outer glow */
+    0 25px 45px rgba(0,0,0,0.7);         /* depth */
 
-  .badge{
-    display:inline-block;
-    background: linear-gradient(90deg,var(--teal1),var(--teal2));
-    color:var(--btn-text);
-    padding:12px 24px;
-    border-radius:50px;
-    font-weight:800;
-    font-size:18px;
-    text-transform:uppercase;
-    margin-bottom:20px;
-    letter-spacing:1px;
-  }
+  animation: edgeGlow 3s ease-in-out infinite alternate;
+}
 
-  .profile-box{
-    width:150px;
-    height:150px;
-    margin: 15px auto 20px;
-    border-radius:16px;
-    overflow:hidden;
-    border:4px solid rgba(14,242,213,0.1);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:rgba(0,0,0,0.3);
+@keyframes edgeGlow{
+  from{
+    box-shadow:
+      0 0 0 1px rgba(14,242,213,0.25),
+      0 0 16px rgba(14,242,213,0.18),
+      0 0 32px rgba(19,242,255,0.1),
+      0 25px 45px rgba(0,0,0,0.7);
   }
-  .profile-box img{
-    width:92%;
-    height:92%;
-    object-fit:cover;
-    border-radius:12px;
+  to{
+    box-shadow:
+      0 0 0 1px rgba(14,242,213,0.45),
+      0 0 28px rgba(14,242,213,0.35),
+      0 0 55px rgba(19,242,255,0.22),
+      0 25px 45px rgba(0,0,0,0.7);
   }
+}
 
-  h1{
-    font-size:28px;
-    margin:10px 0 6px;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    color:#fff;
-  }
-  .subtitle{
-    font-size:14px;
-    color:var(--muted);
-    margin-bottom:20px;
-  }
+/* MARQUEE */
+.marquee{
+  background:linear-gradient(90deg,var(--teal1),var(--teal2));
+  color:var(--btn-text);
+  font-weight:900;
+  padding:10px 0;
+  border-radius:12px;
+  margin-bottom:12px;
+  font-size:15px;
+  letter-spacing:1px;
+}
 
-  .pill{
-    display:block;
-    width:100%;
-    padding:18px 0;
-    margin:10px 0;
-    border-radius:50px;
-    background:linear-gradient(90deg,var(--teal1),var(--teal2));
-    color:var(--btn-text);
-    font-weight:800;
-    font-size:18px;
-    text-decoration:none;
-    letter-spacing:1px;
-  }
-  .pill-sub{
-    font-size:12px;
-    color:var(--muted);
-    margin-bottom:10px;
-  }
+/* PROFILE */
+.profile-box{
+  width:180px;
+  height:180px;
+  margin:12px auto 18px;
+  border-radius:18px;
+  overflow:hidden;
+  border:4px solid rgba(14,242,213,0.25);
+}
+.profile-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-  .hurry{
-    margin-top:10px;
-    color:var(--teal1);
-    font-weight:800;
-    letter-spacing:1px;
-  }
+/* TEXT */
+h1{
+  font-size:28px;
+  margin:6px 0;
+  font-weight:800;
+}
+.subtitle{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:18px;
+}
 
-  .timer{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    margin:15px 0 20px;
-  }
-  .cell{
-    background:rgba(1,40,38,0.6);
-    padding:12px 16px;
-    border-radius:10px;
-    width:70px;
-    box-shadow: inset 0 -6px 12px rgba(0,0,0,0.45);
-  }
-  .num{
-    font-size:28px;
-    font-weight:800;
-  }
-  .lab{
-    font-size:12px;
-    color:var(--label-red);
-    margin-top:6px;
-    font-weight:700;
-  }
+/* CTA */
+.pill{
+  display:block;
+  width:100%;
+  padding:18px 0;
+  margin:14px 0;
+  border-radius:50px;
+  background:linear-gradient(90deg,var(--teal1),var(--teal2));
+  color:var(--btn-text);
+  font-weight:900;
+  font-size:18px;
+  text-decoration:none;
+  letter-spacing:1px;
+}
+.pill-sub{
+  font-size:12px;
+  color:var(--muted);
+}
 
-  .features{
-    margin-top:15px;
-    margin-bottom:20px;
-  }
-  .feature-item{
-    display:flex;
-    gap:6px;
-    justify-content:center;
-    margin:6px 0;
-    font-weight:700;
-    color:var(--muted);
-    font-size:15px;
-  }
-  .star{
-    color:#ffd24d;
-  }
+.hurry{
+  color:var(--teal1);
+  font-weight:800;
+  margin-top:6px;
+}
 
-  .divider{
-    height:1px;
-    background:rgba(255,255,255,0.02);
-    margin:20px auto;
-    max-width:360px;
-  }
+/* TIMER */
+.timer{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:16px 0 20px;
+}
+.cell{
+  background:rgba(1,40,38,0.6);
+  padding:12px 16px;
+  border-radius:10px;
+  width:70px;
+}
+.num{
+  font-size:28px;
+  font-weight:800;
+}
+.lab{
+  font-size:12px;
+  color:var(--label-red);
+  margin-top:4px;
+  font-weight:700;
+}
 
-  .exp h2{
-    font-size:20px;
-    margin-bottom:6px;
-    color:#e7f8f4;
-    font-weight:800;
-  }
-  .big{
-    font-size:18px;
-    color:var(--teal1);
-    font-weight:800;
-    margin-bottom:4px;
-  }
-  .mini{
-    font-size:12px;
-    color:rgba(255,255,255,0.5);
-    letter-spacing:2px;
-  }
+/* FEATURES */
+.features{margin-bottom:18px;}
+.feature-item{
+  margin:6px 0;
+  font-weight:700;
+  color:var(--muted);
+}
+.star{color:#ffd24d;}
+
+/* EXPERIENCE */
+.divider{
+  height:1px;
+  background:rgba(255,255,255,0.05);
+  margin:20px auto;
+}
+.exp h2{font-size:20px;}
+.big{
+  color:var(--teal1);
+  font-weight:800;
+}
+.mini{
+  font-size:12px;
+  opacity:0.6;
+  letter-spacing:2px;
+}
 </style>
 
 <script>
-  // 30-minute countdown timer
-  let timerMinutes = 30;
-  let timerSeconds = 0;
-
-  function updateTimer(){
-    const min = timerMinutes.toString().padStart(2,'0');
-    const sec = timerSeconds.toString().padStart(2,'0');
-    document.getElementById('timer-min').innerText = min;
-    document.getElementById('timer-sec').innerText = sec;
-
-    if(timerSeconds === 0){
-      if(timerMinutes === 0){
-        clearInterval(timerInterval);
-        return;
-      } else {
-        timerMinutes--;
-        timerSeconds = 59;
-      }
-    } else {
-      timerSeconds--;
-    }
-  }
-
-  const timerInterval = setInterval(updateTimer,1000);
-  window.onload = updateTimer;
+let m=30,s=0;
+setInterval(()=>{
+  document.getElementById("min").innerText=String(m).padStart(2,'0');
+  document.getElementById("sec").innerText=String(s).padStart(2,'0');
+  if(s===0){ if(m===0)return; m--; s=59; } else s--;
+},1000);
 </script>
 </head>
 
 <body>
 <div class="wrap">
 
-  <div class="badge">J U N ϟ O R ʜᴀᴄᴋᴇʀ‎</div>
-
-  <div class="profile-box">
-    <img src="https://raw.githubusercontent.com/rajendra9315/deepwebstudio/main/dmwin.png" alt="Profile Picture" />
+  <div class="marquee">
+    <marquee scrollamount="4">🔥 FREE VIP SURESHOT • LIMITED TIME • JOIN FAST 🔥</marquee>
   </div>
 
-  <h1>VIP PREDICTION</h1>
+  <div class="profile-box">
+    <img src="https://raw.githubusercontent.com/rajendra9315/deepwebstudio/main/dmwin.png">
+  </div>
+
+  <h1>1 LEVEL WALLET SURESHOT </h1>
   <div class="subtitle">JOIN FAST FOR FREE SURESHOT VIP HACKS</div>
 
-  <a class="pill" href="https://t.me/+lYBUmbmxbwA2Njg9">JOIN TELEGRAM GROUP  </a>
+  <a class="pill" href="https://t.me/+lYBUmbmxbwA2Njg9">JOIN TELEGRAM NOW</a>
   <div class="pill-sub">FREE VIP HACKS</div>
 
   <div class="hurry">HURRY UP! JOIN NOW</div>
 
   <div class="timer">
-    <div class="cell"><div class="num" id="timer-min">30</div><div class="lab">MINUTES</div></div>
-    <div class="cell"><div class="num" id="timer-sec">00</div><div class="lab">SECONDS</div></div>
+    <div class="cell"><div class="num" id="min">30</div><div class="lab">MIN</div></div>
+    <div class="cell"><div class="num" id="sec">00</div><div class="lab">SEC</div></div>
   </div>
 
   <div class="features">
-    <div class="feature-item"><span class="star">⭐</span> 100% WINNING SURESHOT <span class="star">⭐</span></div>
-    <div class="feature-item"><span class="star">⭐</span> 100% LOSS RECOVERY <span class="star">⭐</span></div>
-    <div class="feature-item"><span class="star">⭐</span> MONTHLY INCOME 30K–50K <span class="star">⭐</span></div>
+    <div class="feature-item">⭐ 100% WINNING SURESHOT</div>
+    <div class="feature-item">⭐ 100% LOSS RECOVERY</div>
+    <div class="feature-item">⭐ MONTHLY INCOME 30K–50K</div>
   </div>
-
-  <a class="pill" href="https://t.me/+lYBUmbmxbwA2Njg9">JOIN SUREHSOT GROUP  </a>
-  <div class="pill-sub">FREE VIP HACKS</div>
 
   <div class="divider"></div>
 
