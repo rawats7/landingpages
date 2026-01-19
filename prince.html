@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Trading Predictions</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Candara, Calibri, Cambria, "Segoe UI", Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#101820;
+    color:#fff;
+    padding:15px;
+}
+
+/* ===== MAIN BOX ===== */
+.box{
+    width:100%;
+    max-width:440px;
+    background:#161f28;
+    border-radius:18px;
+    overflow:hidden;
+}
+
+/* ===== MARQUEE ===== */
+.marquee{
+    background:#00bcd4;
+    color:#000;
+    font-size:15px;
+    font-weight:600;
+    padding:8px 0;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.marquee span{
+    display:inline-block;
+    padding-left:100%;
+    animation:
+        marquee 14s linear infinite,
+        textPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes marquee{
+    0%{ transform:translateX(0); }
+    100%{ transform:translateX(-100%); }
+}
+
+@keyframes textPulse{
+    0%,100%{ opacity:1; }
+    50%{ opacity:0.85; }
+}
+
+/* ===== CONTENT ===== */
+.content{
+    padding:22px;
+    text-align:center;
+}
+
+/* ===== CHANNEL NAME ===== */
+.channel-name{
+    font-family: Cambria, Georgia, serif;
+    font-size:18px;
+    font-weight:600;
+    color:#ff9800;
+    margin-bottom:14px;
+}
+
+/* ===== PROFILE PHOTO ===== */
+.profile-photo{
+    width:140px;
+    height:140px;
+    margin:0 auto 12px;
+    border-radius:14px;
+    overflow:hidden;
+}
+
+.profile-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ===== TITLE ===== */
+h2{
+    font-size:18px;
+    font-weight:600;
+}
+
+.sub{
+    font-size:13px;
+    opacity:0.8;
+    margin-bottom:16px;
+}
+
+/* ===== CTA ===== */
+.cta{
+    display:block;
+    text-decoration:none;
+    background:#00bcd4;
+    color:#000;
+    padding:15px;
+    border-radius:12px;
+    font-weight:600;
+    font-size:17px;
+    margin:18px 0 14px;
+}
+
+/* ===== INLINE POINTS ===== */
+.points{
+    font-size:15px;
+    line-height:1.6;
+    opacity:0.9;
+    margin-bottom:18px;
+}
+
+.points span{
+    color:#ff9800;
+}
+
+/* ===== COUNTER ===== */
+.counter{
+    font-size:24px;
+    font-weight:600;
+    color:#00bcd4;
+}
+
+.counter-text{
+    font-size:12px;
+    opacity:0.75;
+    margin-bottom:12px;
+}
+
+/* ===== COUNTDOWN ===== */
+.countdown{
+    background:#1e2a35;
+    border-radius:12px;
+    padding:12px;
+    margin-bottom:14px;
+}
+
+.timer{
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:1px;
+    color:#00bcd4;
+}
+
+/* ===== FOOTER ===== */
+.note{
+    font-size:11px;
+    opacity:0.65;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <span>LIVE COLOR TRADING PREDICTIONS • NEXT SESSION ACTIVE • JOIN BEFORE CLOSE</span>
+    </div>
+
+    <div class="content">
+
+        <!-- CHANNEL NAME -->
+        <div class="channel-name">
+            YOUR_CHANNEL_NAME
+        </div>
+
+        <!-- PROFILE PHOTO -->
+        <div class="profile-photo">
+            <img src="YOUR_PROFILE_IMAGE_URL" alt="Profile">
+        </div>
+
+        <h2>Color Trade Analyst</h2>
+        <div class="sub">Disciplined • Simple • Risk Aware</div>
+
+        <!-- CTA -->
+        <a href="https://t.me/YOUR_CHANNEL_USERNAME" class="cta">
+            Join Telegram Channel
+        </a>
+
+        <!-- INLINE POINTS -->
+        <div class="points">
+            <span>•</span> Pattern based color predictions &nbsp; <br>
+            <span>•</span> Simple logic no overtrading &nbsp;<br>
+            <span>•</span> Real time Telegram alerts
+        </div>
+
+        <!-- COUNTER -->
+        <div class="counter" id="joinCount">600</div>
+        <div class="counter-text">Members Joined</div>
+
+        <!-- COUNTDOWN -->
+        <div class="countdown">
+            Access Closes In
+            <div class="timer" id="countdown">30:00</div>
+        </div>
+
+        <div class="note">
+            Trading involves risk. Educational purpose only.
+        </div>
+
+    </div>
+</div>
+
+<script>
+/* PERSISTENT MEMBER COUNTER */
+let count = localStorage.getItem("memberCount");
+count = count ? parseInt(count) : 600;
+
+const counterEl = document.getElementById("joinCount");
+counterEl.textContent = count.toLocaleString();
+
+setInterval(() => {
+    count += 1;
+    counterEl.textContent = count.toLocaleString();
+    localStorage.setItem("memberCount", count);
+}, 4000);
+
+/* 30 MIN COUNTDOWN */
+let remaining = 30 * 60;
+setInterval(() => {
+    const m = String(Math.floor(remaining / 60)).padStart(2,'0');
+    const s = String(remaining % 60).padStart(2,'0');
+    document.getElementById("countdown").textContent = `${m}:${s}`;
+    remaining--;
+    if(remaining < 0) remaining = 30 * 60;
+}, 1000);
+</script>
+
+</body>
+</html>
