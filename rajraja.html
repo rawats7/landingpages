@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raja Games | Official</title>
+
+<style>
+/* ---------- GLOBAL ---------- */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+body{
+  background:#0b0b0b;
+  color:#fff;
+}
+
+/* ---------- HEADER ---------- */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+  background:#111;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+header h1{
+  color:#d4af37;
+  font-size:26px;
+}
+nav a{
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:15px;
+}
+nav a:hover{
+  color:#d4af37;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  padding:90px 20px;
+  text-align:center;
+  background:linear-gradient(180deg,#0b0b0b,#141414);
+}
+.hero h2{
+  font-size:42px;
+  margin-bottom:15px;
+  color:#d4af37;
+}
+.hero p{
+  font-size:17px;
+  max-width:650px;
+  margin:0 auto 30px;
+  color:#ccc;
+}
+.hero .btns a{
+  display:inline-block;
+  padding:14px 30px;
+  margin:10px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn-main{
+  background:linear-gradient(45deg,#d4af37,#ffcc00);
+  color:#000;
+}
+.btn-outline{
+  border:2px solid #d4af37;
+  color:#d4af37;
+}
+
+/* ---------- SECTION ---------- */
+.section{
+  padding:70px 40px;
+  max-width:1200px;
+  margin:auto;
+}
+.section h3{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:40px;
+  color:#d4af37;
+}
+
+/* ---------- CARDS ---------- */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.card{
+  background:#151515;
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
+  border:1px solid #222;
+}
+.card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+.card h4{
+  color:#d4af37;
+  margin-bottom:10px;
+}
+.card p{
+  color:#bbb;
+  font-size:14px;
+}
+
+/* ---------- CTA ---------- */
+.cta{
+  background:linear-gradient(180deg,#111,#0b0b0b);
+  text-align:center;
+  padding:80px 20px;
+}
+.cta h3{
+  font-size:34px;
+  margin-bottom:20px;
+  color:#d4af37;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:#111;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#888;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:600px){
+  header{
+    flex-direction:column;
+  }
+  nav{
+    margin-top:10px;
+  }
+  .hero h2{
+    font-size:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>Raja Games</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Proofs</a>
+    <a href="#">Videos</a>
+    <a href="#">Register</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>100% Real Winning Proofs</h2>
+  <p>Daily winning updates, member proofs, and step-by-step registration guidance.  
+     Join our trusted Raja Games community today.</p>
+  <div class="btns">
+    <a href="#" class="btn-main">Register Now</a>
+    <a href="#" class="btn-outline">Join Telegram</a>
+  </div>
+</section>
+
+<!-- PROOF PREVIEW -->
+<section class="section">
+  <h3>Recent Winning Proofs</h3>
+  <div class="cards">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" alt="Proof">
+      <h4>₹25,000 WIN</h4>
+      <p>Member ID #2041<br>Live winning proof</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" alt="Proof">
+      <h4>₹18,500 WIN</h4>
+      <p>Trusted member result</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" alt="Proof">
+      <h4>₹32,000 WIN</h4>
+      <p>Daily winning update</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h3>Start Your Journey With Raja Games</h3>
+  <div class="btns">
+    <a href="#" class="btn-main">Registration Link</a>
+    <a href="#" class="btn-outline">DM Admin</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Raja Games | Frontend Demo Website
+</footer>
+
+</body>
+</html>
