@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Premium Telegram Access</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#070b16;
+  --card:#0f172a;
+  --accent1:#00e5ff;
+  --accent2:#7c4dff;
+  --accent3:#22c55e;
+  --text:#e5e7eb;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:"Segoe UI",system-ui,Arial,sans-serif;
+  background:radial-gradient(circle at top,#111827,#020617);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text);
+}
+
+/* MAIN CARD */
+.container{
+  width:100%;
+  max-width:420px;
+  padding:18px;
+}
+
+.card{
+  background:linear-gradient(180deg,#0f172a,#020617);
+  border-radius:28px;
+  padding:26px 22px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06),
+    0 40px 120px rgba(0,0,0,0.9);
+  text-align:center;
+}
+
+/* PROFILE (INSIDE CARD) */
+.profile{
+  margin-bottom:14px;
+}
+
+.profile img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid transparent;
+  background:
+    linear-gradient(#000,#000) padding-box,
+    linear-gradient(135deg,var(--accent1),var(--accent2)) border-box;
+  box-shadow:0 0 35px rgba(124,77,255,0.7);
+}
+
+/* CHANNEL NAME */
+.name{
+  font-size:26px;
+  font-weight:900;
+  background:linear-gradient(90deg,#fbbf24,#fb7185);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.followers{
+  margin-top:4px;
+  font-size:14px;
+  color:var(--accent1);
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin:18px 0;
+}
+
+.stat{
+  background:rgba(255,255,255,0.05);
+  border-radius:14px;
+  padding:14px 8px;
+}
+
+.stat .num{
+  font-size:20px;
+  font-weight:900;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.stat .label{
+  font-size:12px;
+  opacity:0.85;
+}
+
+/* CTA BUTTON (BETTER COLOR) */
+.cta{
+  display:block;
+  width:100%;
+  margin:18px 0;
+  padding:16px;
+  border-radius:50px;
+  background:linear-gradient(90deg,#22c55e,#16a34a);
+  color:#022c22;
+  font-weight:900;
+  font-size:16px;
+  text-decoration:none;
+  box-shadow:0 0 30px rgba(34,197,94,0.6);
+}
+
+/* TIMER */
+.timer-box{
+  background:rgba(255,255,255,0.05);
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:16px;
+}
+
+.timer-title{
+  font-size:14px;
+  color:var(--accent1);
+  margin-bottom:10px;
+}
+
+.timer{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+}
+
+.time{
+  background:#020617;
+  border-radius:12px;
+  padding:10px 6px;
+}
+
+.time .num{
+  font-size:22px;
+  font-weight:900;
+}
+
+.time .txt{
+  font-size:11px;
+  opacity:0.8;
+}
+
+/* INFO */
+.info{
+  background:rgba(255,255,255,0.04);
+  border-radius:16px;
+  padding:14px;
+  font-size:13px;
+  text-align:left;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:16px;
+  font-size:11px;
+  opacity:0.75;
+  line-height:1.4;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="card">
+
+    <!-- PROFILE -->
+    <div class="profile">
+      <img src="profile.jpg" alt="Profile">
+    </div>
+
+    <!-- NAME -->
+    <div class="name">Trustable Aarav</div>
+    <div class="followers">👥 12.4k Followers</div>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat">
+        <div class="num">12,842</div>
+        <div class="label">Subscribers</div>
+      </div>
+      <div class="stat">
+        <div class="num">1,932</div>
+        <div class="label">Predictions</div>
+      </div>
+      <div class="stat">
+        <div class="num">91%</div>
+        <div class="label">Accuracy</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <a href="https://t.me/YourChannelUsername" class="cta">
+      🚀 Join Telegram Channel
+    </a>
+
+    <!-- TIMER -->
+    <div class="timer-box">
+      <div class="timer-title">Next Prediction In</div>
+      <div class="timer">
+        <div class="time"><div class="num" id="d">01</div><div class="txt">Days</div></div>
+        <div class="time"><div class="num" id="h">08</div><div class="txt">Hours</div></div>
+        <div class="time"><div class="num" id="m">22</div><div class="txt">Minutes</div></div>
+        <div class="time"><div class="num" id="s">40</div><div class="txt">Seconds</div></div>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="info">
+      ⏱ <b>Pre-match Predictions</b><br>
+      Daily expert analysis before matches with high-accuracy insights.
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      Made by Rajendra<br>
+      © All Rights Are Reserved<br>
+      Do not use any part of this landing page without the consent of admin.
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* COUNTDOWN */
+let total = 1*24*3600 + 8*3600 + 22*60 + 40;
+setInterval(()=>{
+  total--;
+  let d=Math.floor(total/86400);
+  let h=Math.floor((total%86400)/3600);
+  let m=Math.floor((total%3600)/60);
+  let s=total%60;
+  document.getElementById("d").textContent=String(d).padStart(2,"0");
+  document.getElementById("h").textContent=String(h).padStart(2,"0");
+  document.getElementById("m").textContent=String(m).padStart(2,"0");
+  document.getElementById("s").textContent=String(s).padStart(2,"0");
+},1000);
+</script>
+
+</body>
+</html>
