@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Join Telegram – Verified Access</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#070b14;
+  --outer:#0d1222;
+  --card:#111827;
+  --gold:#ff9f1a;
+  --soft:#f5f5f5;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:"Segoe UI",system-ui,Arial,sans-serif;
+  background:radial-gradient(circle at top,#1f2933,#020617);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--soft);
+}
+
+/* OUTER FRAME */
+.outer{
+  width:100%;
+  max-width:440px;
+  padding:18px;
+  border-radius:30px;
+  background:linear-gradient(180deg,#0d1222,#020617);
+  box-shadow:
+    0 0 0 1px rgba(255,159,26,0.25),
+    0 0 70px rgba(255,159,26,0.3),
+    0 40px 120px rgba(0,0,0,0.9);
+}
+
+/* MARQUEE */
+.marquee{
+  background:linear-gradient(90deg,#ffb347,#ff9f1a);
+  color:#1a1a1a;
+  font-weight:900;
+  border-radius:16px;
+  padding:12px;
+  margin-bottom:16px;
+  box-shadow:0 0 25px rgba(255,159,26,0.6);
+}
+
+.marquee marquee{font-size:14px}
+
+/* CARD */
+.card{
+  background:linear-gradient(180deg,#111827,#020617);
+  border-radius:26px;
+  padding:26px 22px 24px;
+  text-align:center;
+  box-shadow:
+    inset 0 0 30px rgba(255,159,26,0.08),
+    0 0 0 1px rgba(255,159,26,0.2);
+}
+
+/* PROFILE */
+.profile{
+  margin-top:-65px;
+}
+
+.profile img{
+  width:115px;
+  height:115px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--gold);
+  box-shadow:
+    0 0 0 7px rgba(255,159,26,0.25),
+    0 0 45px rgba(255,159,26,0.8);
+}
+
+/* CHANNEL */
+.channel{
+  margin-top:12px;
+  font-size:26px;
+  font-weight:900;
+  color:var(--gold);
+  letter-spacing:1.2px;
+}
+
+.subtitle{
+  font-size:13px;
+  opacity:0.85;
+}
+
+/* TRUST */
+.trust{
+  margin:12px 0;
+  font-size:13px;
+  background:rgba(255,255,255,0.08);
+  padding:10px;
+  border-radius:12px;
+}
+
+/* STATS */
+.stat{
+  font-size:15px;
+  font-weight:600;
+  margin:6px 0;
+}
+
+.stat span{
+  color:var(--gold);
+  font-size:19px;
+}
+
+/* TIMER */
+.timer{
+  font-size:30px;
+  font-weight:900;
+  margin:14px 0;
+}
+
+/* PROGRESS */
+.progress{
+  height:9px;
+  background:rgba(255,255,255,0.15);
+  border-radius:20px;
+  overflow:hidden;
+  margin-bottom:14px;
+}
+
+.bar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#ffb347,#ff9f1a);
+}
+
+/* CTA */
+.cta{
+  display:block;
+  width:100%;
+  padding:16px;
+  border-radius:50px;
+  background:linear-gradient(90deg,#ffb347,#ff9f1a);
+  color:#1a1a1a;
+  font-weight:900;
+  font-size:16px;
+  text-decoration:none;
+  box-shadow:0 0 35px rgba(255,159,26,0.7);
+  margin-bottom:14px;
+}
+
+/* IMAGE SECTIONS */
+.section-title{
+  margin:12px 0 8px;
+  font-size:14px;
+  font-weight:700;
+  color:var(--gold);
+}
+
+.image-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:6px;
+  margin-bottom:14px;
+}
+
+.image-grid img{
+  width:100%;
+  height:60px;
+  object-fit:cover;
+  border-radius:8px;
+  border:1px solid rgba(255,159,26,0.4);
+}
+
+/* FOOTER */
+.footer{
+  margin-top:10px;
+  font-size:11px;
+  opacity:0.8;
+  line-height:1.4;
+}
+</style>
+</head>
+
+<body>
+
+<div class="outer">
+
+  <div class="marquee">
+    <marquee>✅ VERIFIED TELEGRAM CHANNEL • REAL MEMBERS • NO SPAM • LIMITED ACCESS</marquee>
+  </div>
+
+  <div class="card">
+
+    <div class="profile">
+      <img src="profile.jpg" alt="Profile">
+    </div>
+
+    <div class="channel">YOUR CHANNEL NAME</div>
+    <div class="subtitle">Official & Verified Telegram Community</div>
+
+    <div class="trust">
+      🔒 Trusted by real users • Transparent • Safe & secure
+    </div>
+
+    <div class="stat">👥 <span id="members">0</span> joined today</div>
+    <div class="stat">⏳ Slots left: <span id="slots">0</span></div>
+
+    <div class="timer" id="timer">01:00</div>
+
+    <div class="progress">
+      <div class="bar" id="bar"></div>
+    </div>
+
+    <a href="https://t.me/YourChannelUsername" class="cta">
+      🚀 JOIN TELEGRAM NOW
+    </a>
+
+    <!-- IMAGE PROOFS -->
+    <div class="section-title">📸 Proofs & Results</div>
+    <div class="image-grid">
+      <img src="proof1.jpg">
+      <img src="proof2.jpg">
+      <img src="proof3.jpg">
+      <img src="proof4.jpg">
+      <img src="proof5.jpg">
+    </div>
+
+    <!-- CLIENT REVIEWS -->
+    <div class="section-title">⭐ Our Clients Reviews</div>
+    <div class="image-grid">
+      <img src="review1.jpg">
+      <img src="review2.jpg">
+      <img src="review3.jpg">
+      <img src="review4.jpg">
+      <img src="review5.jpg">
+      <img src="review6.jpg">
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      © All Rights Are Reserved<br>
+      Do not use any part of this landing page without the consent of admin.
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* REDIRECT */
+const REDIRECT_URL="https://t.me/YourChannelUsername";
+let total=60,start=60;
+
+/* TIMER */
+const t=document.getElementById("timer"),b=document.getElementById("bar");
+const interval=setInterval(()=>{
+  total--;
+  let m=Math.floor(total/60),s=total%60;
+  t.textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+  b.style.width=((start-total)/start)*100+"%";
+  if(total<=0){
+    clearInterval(interval);
+    window.location.href=REDIRECT_URL;
+  }
+},1000);
+
+/* COUNTERS */
+const today=new Date().toDateString();
+let data=JSON.parse(localStorage.getItem("tgFinal"));
+if(!data||data.date!==today){
+  data={date:today,members:Math.floor(Math.random()*300)+1000,slots:Math.floor(Math.random()*8)+4};
+}
+document.getElementById("members").textContent=data.members;
+document.getElementById("slots").textContent=data.slots;
+
+setInterval(()=>{
+  data.members++;
+  if(data.slots>0) data.slots--;
+  document.getElementById("members").textContent=data.members;
+  document.getElementById("slots").textContent=data.slots;
+  localStorage.setItem("tgFinal",JSON.stringify(data));
+},4000);
+</script>
+
+</body>
+</html>
