@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Join Telegram – Premium Access</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#070b14;
+  --outer:#0d1222;
+  --card:#111827;
+  --gold:#ff9f1a;
+  --soft:#f5f5f5;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:"Segoe UI",system-ui,Arial,sans-serif;
+  background:radial-gradient(circle at top,#1f2933,#020617);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--soft);
+}
+
+/* ===== OUTER PREMIUM BOX ===== */
+.outer{
+  width:100%;
+  max-width:440px;
+  padding:18px;
+  border-radius:30px;
+  background:linear-gradient(180deg,#0d1222,#020617);
+  box-shadow:
+    0 0 0 1px rgba(255,159,26,0.25),
+    0 0 60px rgba(255,159,26,0.25),
+    0 40px 120px rgba(0,0,0,0.9);
+}
+
+/* ===== MARQUEE ===== */
+.marquee{
+  background:linear-gradient(90deg,#ffb347,#ff9f1a);
+  color:#1a1a1a;
+  font-weight:900;
+  border-radius:16px;
+  padding:12px;
+  margin-bottom:18px;
+  box-shadow:0 0 25px rgba(255,159,26,0.6);
+}
+
+.marquee marquee{
+  font-size:14px;
+}
+
+/* ===== INNER CARD ===== */
+.card{
+  background:linear-gradient(180deg,#111827,#020617);
+  border-radius:26px;
+  padding:28px 22px 30px;
+  text-align:center;
+  box-shadow:
+    inset 0 0 30px rgba(255,159,26,0.08),
+    0 0 0 1px rgba(255,159,26,0.2);
+}
+
+/* Profile */
+.profile{
+  margin-top:-70px;
+}
+
+.profile img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#000;
+  border:4px solid var(--gold);
+  box-shadow:
+    0 0 0 7px rgba(255,159,26,0.25),
+    0 0 45px rgba(255,159,26,0.8);
+}
+
+/* Channel name */
+.channel{
+  margin-top:14px;
+  font-size:27px;
+  font-weight:900;
+  color:var(--gold);
+  letter-spacing:1.2px;
+}
+
+.subtitle{
+  font-size:13px;
+  opacity:0.85;
+}
+
+/* Stats */
+.stats{
+  margin-top:18px;
+}
+
+.stat{
+  font-size:16px;
+  font-weight:600;
+  margin:6px 0;
+}
+
+.stat span{
+  color:var(--gold);
+  font-size:20px;
+}
+
+/* Timer */
+.timer{
+  font-size:34px;
+  font-weight:900;
+  margin:18px 0;
+  letter-spacing:2px;
+}
+
+/* Progress */
+.progress{
+  height:10px;
+  background:rgba(255,255,255,0.15);
+  border-radius:20px;
+  overflow:hidden;
+  margin-bottom:18px;
+}
+
+.bar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#ffb347,#ff9f1a);
+  transition:width 1s linear;
+}
+
+/* CTA */
+.cta{
+  display:block;
+  width:100%;
+  padding:17px;
+  border-radius:50px;
+  background:linear-gradient(90deg,#ffb347,#ff9f1a);
+  color:#1a1a1a;
+  font-weight:900;
+  font-size:16px;
+  text-decoration:none;
+  box-shadow:0 0 35px rgba(255,159,26,0.7);
+  animation:pulse 1.3s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+
+.cancel{
+  margin-top:12px;
+  font-size:12px;
+  opacity:0.8;
+  cursor:pointer;
+  text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+
+<div class="outer">
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <marquee>
+      🔥 PREMIUM TELEGRAM ACCESS • VERIFIED UPDATES • LIMITED SLOTS • JOIN NOW
+    </marquee>
+  </div>
+
+  <!-- INNER CARD -->
+  <div class="card">
+
+    <div class="profile">
+      <img src="profile.jpg" alt="Channel Profile">
+    </div>
+
+    <div class="channel">YOUR CHANNEL NAME</div>
+    <div class="subtitle">Official Premium Telegram Channel</div>
+
+    <div class="stats">
+      <div class="stat">👥 <span id="members">0</span> joined today</div>
+      <div class="stat">⏳ Slots left: <span id="slots">0</span></div>
+    </div>
+
+    <div class="timer" id="timer">23:45</div>
+
+    <div class="progress">
+      <div class="bar" id="bar"></div>
+    </div>
+
+    <a href="https://t.me/YourChannelUsername" class="cta">
+      🚀 JOIN TELEGRAM NOW
+    </a>
+
+    <div class="cancel" id="cancel">Cancel auto-redirect</div>
+
+  </div>
+</div>
+
+<script>
+/* CONFIG */
+const REDIRECT_URL="https://t.me/YourChannelUsername";
+let total=23*60+45,start=total,active=true;
+
+/* TIMER */
+const t=document.getElementById("timer"),b=document.getElementById("bar");
+const interval=setInterval(()=>{
+  if(!active) return;
+  total--;
+  let m=Math.floor(total/60),s=total%60;
+  t.textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+  b.style.width=((start-total)/start)*100+"%";
+  if(total<=0){
+    clearInterval(interval);
+    window.location.href=REDIRECT_URL;
+  }
+},1000);
+
+/* CANCEL */
+document.getElementById("cancel").onclick=()=>{
+  active=false;
+  t.textContent="Paused";
+};
+
+/* DAILY COUNTERS */
+const today=new Date().toDateString();
+let data=JSON.parse(localStorage.getItem("tgUltra"));
+if(!data||data.date!==today){
+  data={date:today,members:Math.floor(Math.random()*300)+800,slots:Math.floor(Math.random()*12)+6};
+}
+document.getElementById("members").textContent=data.members;
+document.getElementById("slots").textContent=data.slots;
+
+setInterval(()=>{
+  data.members++;
+  if(data.slots>0) data.slots--;
+  document.getElementById("members").textContent=data.members;
+  document.getElementById("slots").textContent=data.slots;
+  localStorage.setItem("tgUltra",JSON.stringify(data));
+},4000);
+</script>
+
+</body>
+</html>
