@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raja Games | Official Channel</title>
+
+<style>
+:root{
+  --bg:#0b0b0b;
+  --card:#141414;
+  --gold:#d4af37;
+  --green:#00c896;
+  --blue:#3b82f6;
+  --red:#ef4444;
+  --text:#e5e5e5;
+  --muted:#9ca3af;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,Arial}
+body{background:var(--bg);color:var(--text)}
+
+header{
+  position:sticky;top:0;z-index:1000;
+  background:#0f0f0f;
+  padding:16px 40px;
+  display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid #1f1f1f
+}
+header h1{color:var(--gold);font-size:24px}
+nav a{
+  margin-left:22px;
+  color:var(--text);
+  text-decoration:none;
+  font-size:14px
+}
+nav a:hover{color:var(--green)}
+
+.hero{
+  padding:100px 20px;
+  text-align:center;
+  background:
+    radial-gradient(circle at top right,#0f172a,transparent 40%),
+    radial-gradient(circle at bottom left,#064e3b,transparent 40%),
+    var(--bg);
+}
+.hero h2{
+  font-size:44px;
+  background:linear-gradient(90deg,var(--gold),var(--green));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.hero p{
+  max-width:760px;
+  margin:22px auto 36px;
+  color:var(--muted);
+  font-size:16px
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:10px;
+  margin:10px;
+  text-decoration:none;
+  font-weight:600
+}
+.btn-gold{background:var(--gold);color:#000}
+.btn-green{background:var(--green);color:#000}
+.btn-blue{border:2px solid var(--blue);color:var(--blue)}
+
+.section{
+  padding:80px 40px;
+  max-width:1200px;
+  margin:auto
+}
+.section h3{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:40px;
+  color:var(--gold)
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px
+}
+
+.card{
+  background:var(--card);
+  padding:26px;
+  border-radius:16px;
+  border:1px solid #1f1f1f
+}
+.card h4{color:var(--green);margin-bottom:10px}
+.card p{color:var(--muted);font-size:14px}
+
+.badge{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600
+}
+.live{background:var(--red);color:#fff}
+.vip{background:var(--gold);color:#000}
+
+.cta{
+  background:linear-gradient(180deg,#020617,var(--bg));
+  padding:90px 20px;
+  text-align:center
+}
+.cta h3{font-size:36px;color:var(--gold);margin-bottom:25px}
+
+footer{
+  background:#020617;
+  padding:25px;
+  text-align:center;
+  color:#6b7280;
+  font-size:13px
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Raja Games</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Proofs</a>
+    <a href="#">Live</a>
+    <a href="#">VIP</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="badge live">LIVE COMMUNITY</span>
+  <h2>Official Raja Games Channel</h2>
+  <p>
+    This platform represents our official channel — transparent updates,
+    shared proofs, community access, and clear VIP conditions.
+  </p>
+  <a href="#" class="btn btn-gold">Join Telegram</a>
+  <a href="#" class="btn btn-green">Message Admin</a>
+  <a href="#" class="btn btn-blue">Watch Live</a>
+</section>
+
+<section class="section">
+  <h3>What This Channel Provides</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>📸 Proof Sharing</h4>
+      <p>Winning screenshots, video proofs, and community updates.</p>
+    </div>
+    <div class="card">
+      <h4>🔴 Live Access</h4>
+      <p>Join live sessions via official external platforms.</p>
+    </div>
+    <div class="card">
+      <h4>💬 Direct Connect</h4>
+      <p>Message admin & join community channels.</p>
+    </div>
+    <div class="card">
+      <h4>👑 VIP Channel</h4>
+      <p>Clear conditions, rules, and premium access links.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h3>VIP Conditions</h3>
+  <div class="grid">
+    <div class="card">
+      <span class="badge vip">VIP RULE</span>
+      <p>No guaranteed profit. Transparency only.</p>
+    </div>
+    <div class="card">
+      <span class="badge vip">VIP RULE</span>
+      <p>Follow updates strictly from official channel.</p>
+    </div>
+    <div class="card">
+      <span class="badge vip">VIP RULE</span>
+      <p>No refund policy. Read conditions before joining.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h3>Join the Official Raja Games Community</h3>
+  <a href="#" class="btn btn-gold">Join Channel</a>
+  <a href="#" class="btn btn-green">Contact Admin</a>
+</section>
+
+<footer>
+  © 2026 Raja Games · Channel Representation Platform · User Responsibility
+</footer>
+
+</body>
+</html>
