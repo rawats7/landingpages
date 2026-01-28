@@ -1,59 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Single Page</title>
+<meta charset="UTF-8">
+<title>Restricted Notice</title>
 
-    <style>
-        /* Force only Cambria */
-        * {
-            font-family: Cambria, "Cambria Math", serif;
-            font-size: 22px;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+    * {
+        font-family: Cambria, "Cambria Math", serif;
+        font-size: 22px;
+        box-sizing: border-box;
+    }
 
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-color: #ffffff;
-            text-align: center;
-        }
-    </style>
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e9ecef;
+    }
+
+    .govt-notice {
+        width: 90%;
+        max-width: 1000px;
+        background: #ffffff;
+        border: 5px solid #000;
+        padding: 45px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .header {
+        text-align: center;
+        border-bottom: 3px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin: 0;
+        color: #000;
+    }
+
+    .header h2 {
+        font-size: 24px;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #b00000;
+    }
+
+    .content p {
+        margin-bottom: 20px;
+        line-height: 1.7;
+        color: #000;
+    }
+
+    .highlight {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .warning-box {
+        border: 3px dashed #b00000;
+        padding: 25px;
+        margin: 30px 0;
+        background: #fff5f5;
+        font-weight: bold;
+        color: #8b0000;
+    }
+
+    .section-title {
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .contact-box {
+        border: 2px solid #000;
+        padding: 18px;
+        margin-top: 15px;
+        font-weight: bold;
+        background: #f1f1f1;
+    }
+
+    .legal {
+        margin-top: 40px;
+        padding-top: 25px;
+        border-top: 3px solid #000;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .stamp {
+        margin-top: 30px;
+        text-align: right;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+</style>
 </head>
+
 <body>
 
-    <div>
-       <center>🔒 RESTRICTED ACCESS NOTICE<BR>
+<div class="govt-notice">
 
-⚠️ CAUTION  <BR>
-
-This landing page is STRICTLY RESTRICTED.<br>
-
-You are not authorized to use or access this page because Rajendra Rawat has restricted this page for you.<br>
-Any unauthorized use, copy, or access is not permitted.<br>
-
-📩 REQUEST ACCESS <br>
-
-If you want this landing page to be restored or made accessible,<br>
-please send a formal email request to:<br>
-
-Rajendra Rawat<br>
-
-Access will be granted only after proper approval.<br>
-
-© LEGAL NOTICE<br>
-
-All rights are reserved.<br>
-Unauthorized use may lead to strict action.
-       </center>
-        
-        
+    <div class="header">
+        <h1>IT IS LAST WARNING </h1>
+        <h2>🔒 RESTRICTED ACCESS NOTICE</h2>
     </div>
+
+    <div class="content">
+
+        <p class="highlight">
+            This landing page is STRICTLY RESTRICTED and UNDER CONTROL.
+        </p>
+
+        <p>
+            You are hereby informed that you are <span class="highlight">NOT AUTHORIZED</span>
+            to access, use, copy, distribute, or interact with this landing page in any manner.
+        </p>
+
+        <p>
+            This restriction has been <span class="highlight">EXPLICITLY IMPOSED</span> by
+            <strong>Rajendra Rawat</strong>.
+        </p>
+
+        <div class="warning-box">
+            ⚠️ WARNING: ANY UNAUTHORIZED ACCESS, DUPLICATION, MODIFICATION,
+            OR MISUSE OF THIS PAGE WILL BE TREATED AS A SERIOUS VIOLATION
+            AND MAY RESULT IN STRICT LEGAL AND ADMINISTRATIVE ACTION.
+        </div>
+
+        <div class="section-title">📩 REQUEST FOR AUTHORIZATION</div>
+
+        <p>
+            If you believe this restriction has been applied in error,
+            or if you seek restoration of access, you must submit a
+            <span class="highlight">FORMAL WRITTEN EMAIL REQUEST</span>.
+        </p>
+
+        <p>All requests must be addressed to:</p>
+
+        <div class="contact-box">
+            Rajendra Rawat
+        </div>
+
+        <p>
+            Access will be granted <span class="highlight">ONLY AFTER OFFICIAL REVIEW
+            AND EXPLICIT APPROVAL</span>. No exceptions will be made.
+        </p>
+
+        <div class="legal">
+            © LEGAL NOTICE<br><br>
+            All rights are strictly reserved. Any violation of this notice
+            may lead to immediate and strict action under applicable rules
+            and policies.
+        </div>
+
+        <div class="stamp">
+            — ISSUED BY AUTHORITY —
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
-
