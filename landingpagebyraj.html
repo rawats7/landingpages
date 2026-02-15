@@ -3,7 +3,25 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>prince </title>
+<title>prince sureshot </title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '921341350349814');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=921341350349814&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
 :root{
   --panel:#071e1d;
@@ -16,18 +34,20 @@
 
 body{
   margin:0;
-  padding:40px 0;
   font-family:'Poppins',sans-serif;
   background:linear-gradient(180deg,#061214,#081617,#071013);
   color:#fff;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
   overflow-x:hidden;
 }
 
-/* ✅ CARD WITH 4-SIDE EDGE GLOW */
+/* CENTER WRAPPER */
+.center-wrap{
+  display:flex;
+  justify-content:center;
+  padding:40px 0;
+}
+
+/* MAIN CARD */
 .wrap{
   max-width:400px;
   width:80%;
@@ -37,12 +57,11 @@ body{
   text-align:center;
   position:relative;
 
-  /* 🔥 EDGE GLOW (NOT MID-PAGE) */
   box-shadow:
-    0 0 0 1px rgba(14,242,213,0.35),     /* thin neon edge */
-    0 0 20px rgba(14,242,213,0.25),      /* soft glow */
-    0 0 40px rgba(19,242,255,0.15),      /* outer glow */
-    0 25px 45px rgba(0,0,0,0.7);         /* depth */
+    0 0 0 1px rgba(14,242,213,0.35),
+    0 0 20px rgba(14,242,213,0.25),
+    0 0 40px rgba(19,242,255,0.15),
+    0 25px 45px rgba(0,0,0,0.7);
 
   animation: edgeGlow 3s ease-in-out infinite alternate;
 }
@@ -64,7 +83,6 @@ body{
   }
 }
 
-/* MARQUEE */
 .marquee{
   background:linear-gradient(90deg,var(--teal1),var(--teal2));
   color:var(--btn-text);
@@ -76,7 +94,6 @@ body{
   letter-spacing:1px;
 }
 
-/* PROFILE */
 .profile-box{
   width:180px;
   height:180px;
@@ -91,7 +108,6 @@ body{
   object-fit:cover;
 }
 
-/* TEXT */
 h1{
   font-size:28px;
   margin:6px 0;
@@ -103,7 +119,6 @@ h1{
   margin-bottom:18px;
 }
 
-/* CTA */
 .pill{
   display:block;
   width:100%;
@@ -128,7 +143,6 @@ h1{
   margin-top:6px;
 }
 
-/* TIMER */
 .timer{
   display:flex;
   justify-content:center;
@@ -152,21 +166,19 @@ h1{
   font-weight:700;
 }
 
-/* FEATURES */
 .features{margin-bottom:18px;}
 .feature-item{
   margin:6px 0;
   font-weight:700;
   color:var(--muted);
 }
-.star{color:#ffd24d;}
 
-/* EXPERIENCE */
 .divider{
   height:1px;
   background:rgba(255,255,255,0.05);
   margin:20px auto;
 }
+
 .exp h2{font-size:20px;}
 .big{
   color:var(--teal1);
@@ -177,6 +189,29 @@ h1{
   opacity:0.6;
   letter-spacing:2px;
 }
+
+/* CONTACT SECTION */
+.contact-section{
+  text-align:center;
+  padding:30px 20px;
+  background:#071e1d;
+  max-width:400px;
+  margin:30px auto 50px;
+  border-radius:15px;
+  box-shadow:0 0 15px rgba(14,242,213,0.2);
+}
+
+.contact-btn{
+  background:linear-gradient(90deg,#0ef2d5,#13f2ff);
+  color:#001818;
+  padding:10px 18px;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:800;
+  font-size:14px;
+  display:inline-block;
+}
+
 </style>
 
 <script>
@@ -190,59 +225,58 @@ setInterval(()=>{
 </head>
 
 <body>
-<div class="wrap">
 
-  <div class="marquee">
-    <marquee scrollamount="4">🔥 FREE VIP SURESHOT • LIMITED TIME • JOIN FAST 🔥</marquee>
+<div class="center-wrap">
+  <div class="wrap">
+
+    <div class="marquee">
+      <marquee scrollamount="4">🔥 FREE VIP SURESHOT • LIMITED TIME • JOIN FAST 🔥</marquee>
+    </div>
+
+    <div class="profile-box">
+      <img src="https://raw.githubusercontent.com/rajendra9315/deepwebstudio/main/6282900880872902656.jpg">
+    </div>
+
+    <h1>𝟭 𝗟𝗘𝗩𝗘𝗟 𝗦𝗛𝗢𝗧 𝐏𝐑𝐈𝐍𝐂𝐄 🌪</h1>
+    <div class="subtitle">JOIN FAST FOR FREE SURESHOT VIP HACKS</div>
+
+    <a class="pill" href="https://t.me/+WjxCAxFE1KplOTA1">JOIN TELEGRAM NOW</a>
+    <div class="pill-sub">FREE VIP HACKS</div>
+
+    <div class="hurry">HURRY UP! JOIN NOW</div>
+
+    <div class="timer">
+      <div class="cell"><div class="num" id="min">30</div><div class="lab">MIN</div></div>
+      <div class="cell"><div class="num" id="sec">00</div><div class="lab">SEC</div></div>
+    </div>
+
+    <div class="features">
+      <div class="feature-item">⭐ 100% WINNING SURESHOT</div>
+      <div class="feature-item">⭐ 100% LOSS RECOVERY</div>
+      <div class="feature-item">⭐ MONTHLY INCOME 30K–50K</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="exp">
+      <h2>5+ YEARS EXPERIENCE</h2>
+      <div class="big">10 LAKH+ WINNING</div>
+      <div class="mini">NUMBER KING</div>
+    </div>
+
   </div>
-
-  <div class="profile-box">
-    <img src="https://raw.githubusercontent.com/rajendra9315/deepwebstudio/main/6282900880872902656.jpg">
-  </div>
-
-  <h1> 𝟭 𝗟𝗘𝗩𝗘𝗟 𝗦𝗛𝗢𝗧 𝐏𝐑𝐈𝐍𝐂𝐄 🌪</h1>
-  <div class="subtitle">JOIN FAST FOR FREE SURESHOT VIP HACKS</div>
-
-  <a class="pill" href="https://t.me/+WjxCAxFE1KplOTA1">JOIN TELEGRAM NOW</a>
-  <div class="pill-sub">FREE VIP HACKS</div>
-
-  <div class="hurry">HURRY UP! JOIN NOW</div>
-
-  <div class="timer">
-    <div class="cell"><div class="num" id="min">30</div><div class="lab">MIN</div></div>
-    <div class="cell"><div class="num" id="sec">00</div><div class="lab">SEC</div></div>
-  </div>
-
-  <div class="features">
-    <div class="feature-item">⭐ 100% WINNING SURESHOT</div>
-    <div class="feature-item">⭐ 100% LOSS RECOVERY</div>
-    <div class="feature-item">⭐ MONTHLY INCOME 30K–50K</div>
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="exp">
-    <h2>5+ YEARS EXPERIENCE</h2>
-    <div class="big">10 LAKH+ WINNING</div>
-    <div class="mini">NUMBER KING</div>
-  </div>
-
 </div>
 
-<div style="text-align:center; padding:20px; background:#f4f6f9; border-radius:10px; max-width:400px; margin:auto;">
-  
-  <h3 style="margin-bottom:8px; font-family:Arial;">Need a Landing Page or Meta Ads Setup?</h3>
-  
-  <p style="font-size:14px; color:#555; margin-bottom:15px;">
-    Contact me for high-converting landing pages and professional Meta Ads setup.
-  </p>
-  
-  <a href="https://t.me/flowbyte_studio" target="_blank" 
-     style="background:#0088cc; color:white; padding:8px 16px; 
-     text-decoration:none; border-radius:5px; font-size:14px;">
-     💬 Message Now
-  </a>
+<!-- CONTACT SECTION AT BOTTOM -->
 
+<div class="contact-section">
+  <h3>🚀 Need Landing Page or Meta Ads Setup?</h3>
+  <p style="font-size:14px; color:rgba(255,255,255,0.7); margin-bottom:18px;">
+    I create high-converting landing pages & profitable Meta Ads campaigns.
+  </p>
+  <a href="https://t.me/flowbyte_studio" target="_blank" class="contact-btn">
+    💬 MESSAGE NOW
+  </a>
 </div>
 
 </body>
