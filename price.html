@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Bhai All Wallet</title>
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<div id="liveJoin"></div>
+
+<div class="container">
+<div class="card">
+
+<div class="badge">🔥 FREE VIP SURESHOT • LIMITED TIME</div>
+
+<div class="profile">
+<img src="https://raw.githubusercontent.com/rajendra9315/deepwebstudio/main/rajjalwa.jpg">
+</div>
+
+<h1>PRINCE SURESHOT </h1>
+
+<div class="sub">Join fast for free VIP updates</div>
+
+<a class="btn" href="https://t.me/+WSR7KgQPjew5N2Q1" target="_blank">
+JOIN TELEGRAM NOW
+</a>
+
+<div class="urgent">⚡ Limited Seats Available</div>
+
+<div class="warning">
+⚠ Only <span id="seats">37</span> VIP seats remaining today
+</div>
+
+<ul class="features">
+<li>High accuracy prediction system</li>
+<li>Smart risk management method</li>
+<li>Daily free VIP updates</li>
+<li>Fast withdraw strategy</li>
+</ul>
+
+<div class="counter">
+👥 10,27,534+ Members Joined
+</div>
+
+<div class="redirect">
+Redirecting to Telegram in <span id="count">30</span> seconds...
+</div>
+
+<div class="footer">
+<div>5+ Years Experience</div>
+<div class="highlight">10 Lakh+ Winning Community</div>
+</div>
+
+</div>
+</div>
+
+<script>
+
+/* COUNTDOWN */
+
+let time=30;
+
+setInterval(()=>{
+time--;
+document.getElementById("count").innerText=time;
+
+if(time<=0){
+window.location.href="https://t.me/+WSR7KgQPjew5N2Q1";
+}
+
+},1000);
+
+
+/* LIVE JOIN POPUP */
+
+const names=[
+"Rahul","Aman","Vikram","Rohit","Sahil",
+"Arjun","Deepak","Ankit","Sumit","Karan",
+"Neeraj","Yash","Ajay","Nitin","Harsh",
+"Manish","Tarun","Abhishek","Raj","Vivek"
+];
+
+const cities=[
+"Delhi","Mumbai","Jaipur","Lucknow",
+"Patna","Bangalore","Kolkata","Surat",
+"Indore","Chandigarh"
+];
+
+function showJoin(){
+
+let name=names[Math.floor(Math.random()*names.length)];
+let city=cities[Math.floor(Math.random()*cities.length)];
+
+let box=document.getElementById("liveJoin");
+
+box.innerHTML="🔥 "+name+" from "+city+" just joined the VIP channel";
+
+box.style.opacity="1";
+
+setTimeout(()=>{
+box.style.opacity="0";
+},3000);
+
+}
+
+setInterval(showJoin,4000);
+
+
+/* DECREASING SEATS */
+
+let seats=37;
+
+setInterval(()=>{
+
+if(seats>12){
+seats--;
+document.getElementById("seats").innerText=seats;
+}
+
+},7000);
+
+</script>
+
+</body>
+</html>
